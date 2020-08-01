@@ -5,7 +5,7 @@ Das Skript nach /usr/sbin/ kopieren und anschließend die crontab anpassen, inde
 
 die folgende Zeile hinzufügt:
 
-*  *    * * *   root	/usr/sbin/luefter.py
+\*  \*    \* \* \*   root	/usr/sbin/luefter.py
 
 Dies sorgt dafür, dass die Prozessortemperatur minütlich überprüft und die Geschwindigkeit
 
