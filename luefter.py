@@ -11,7 +11,9 @@ pwm = pwm.rstrip()
 
 temperatur_float = float(temperatur)
 
-if temperatur_float < 36.0:
+if temperatur_float < 35.0:
+    run(["sudo", "sh", "-c", "echo 0 > /sys/devices/pwm-fan/target_pwm"])
+if temperatur_float > 35.0 and temperatur_float < 36.0:
     run(["sudo", "sh", "-c", "echo 100 > /sys/devices/pwm-fan/target_pwm"])
 if temperatur_float > 36.0 and temperatur_float < 37.0:
     run(["sudo", "sh",  "-c", "echo 150 > /sys/devices/pwm-fan/target_pwm"])
