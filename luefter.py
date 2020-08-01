@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 from os import remove
-from os.path import exists
-from socket import gethostname
 from subprocess import check_output, run
-from sys import argv
 
 run(["sudo", "/usr/bin/jetson_clocks"])
 
