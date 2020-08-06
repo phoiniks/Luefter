@@ -14,10 +14,14 @@ temperatur_float = float(temperatur)
 if temperatur_float < 35.0:
     run(["sudo", "sh", "-c", "echo 0 > /sys/devices/pwm-fan/target_pwm"])
 if temperatur_float > 35.0 and temperatur_float < 36.0:
-    run(["sudo", "sh", "-c", "echo 100 > /sys/devices/pwm-fan/target_pwm"])
+    run(["sudo", "sh", "-c", "echo 150 > /sys/devices/pwm-fan/target_pwm"])
 if temperatur_float > 36.0 and temperatur_float < 37.0:
-    run(["sudo", "sh",  "-c", "echo 150 > /sys/devices/pwm-fan/target_pwm"])
+    run(["sudo", "sh",  "-c", "echo 170 > /sys/devices/pwm-fan/target_pwm"])
 if temperatur_float > 37.0 and temperatur_float < 38.0:
-    run(["sudo", "sh",  "-c", "echo 200 > /sys/devices/pwm-fan/target_pwm"])
-if temperatur_float > 38.0:
+    run(["sudo", "sh",  "-c", "echo 190 > /sys/devices/pwm-fan/target_pwm"])
+if temperatur_float > 38.0 and temperatur_float < 39.0:
+    run(["sudo", "sh",  "-c", "echo 210 > /sys/devices/pwm-fan/target_pwm"])
+if temperatur_float > 39.0 and temperatur_float < 40.0:
+    run(["sudo", "sh",  "-c", "echo 230 > /sys/devices/pwm-fan/target_pwm"])
+if temperatur_float > 40.0:
     run(["sudo", "sh",  "-c", "echo 255 > /sys/devices/pwm-fan/target_pwm"])
